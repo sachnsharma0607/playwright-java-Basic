@@ -19,4 +19,16 @@ public class OpenAndTypeIntoTextBox {
 		browser.close();
 
 	}
+	
+	@Test
+	public void TypeintoTextBoxWithType() throws InterruptedException {
+		Playwright playwright = Playwright.create();
+		Browser browser = playwright.firefox().launch(new BrowserType.LaunchOptions().setHeadless(false));
+		Page page = browser.newPage();
+		page.navigate("https://www.google.com/");
+		page.type("#APjFqb","playwright");
+		Thread.sleep(1500);
+		browser.close();
+
+	}
 }

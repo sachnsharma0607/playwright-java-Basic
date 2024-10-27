@@ -20,15 +20,5 @@ public class OpenBrowserAndCloseBrowser {
 
 	}
 
-	@Test
-	public void clickOnElement() throws InterruptedException {
-		Playwright playwright = Playwright.create();
-		Browser browser = playwright.firefox().launch(new BrowserType.LaunchOptions().setHeadless(false));
-		Page page = browser.newPage();
-		page.navigate("https://www.google.com/");
-		page.locator("#APjFqb").type("selenium");
-		Thread.sleep(1500);
-		browser.close();
-
-	}
+	
 }
