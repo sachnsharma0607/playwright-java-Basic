@@ -7,21 +7,9 @@ import com.microsoft.playwright.BrowserType;
 import com.microsoft.playwright.Page;
 import com.microsoft.playwright.Playwright;
 
-public class OpenBrowserAndCloseBrowser {
-
+public class OpenAndTypeIntoTextBox {
 	@Test
-	public void openBrowserAndclose() {
-		Playwright playwright = Playwright.create();
-		Browser browser = playwright.firefox().launch(new BrowserType.LaunchOptions().setHeadless(false));
-		Page page = browser.newPage();
-		page.navigate("https://mvnrepository.com/artifact/com.microsoft.playwright");
-		System.out.println("dfd");
-		browser.close();
-
-	}
-
-	@Test
-	public void clickOnElement() throws InterruptedException {
+	public void TypeintoTextBox() throws InterruptedException {
 		Playwright playwright = Playwright.create();
 		Browser browser = playwright.firefox().launch(new BrowserType.LaunchOptions().setHeadless(false));
 		Page page = browser.newPage();
