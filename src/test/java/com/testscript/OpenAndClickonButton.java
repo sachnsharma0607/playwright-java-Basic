@@ -14,7 +14,7 @@ public class OpenAndClickonButton {
 	@Test
 	public void TypeintoTextBoxWithType_SetDelayOption_And_ClickOnButton() throws InterruptedException {
 		Playwright playwright = Playwright.create();
-		Browser browser = playwright.firefox().launch(new BrowserType.LaunchOptions().setHeadless(false));
+		Browser browser = playwright.chromium().launch(new BrowserType.LaunchOptions().setHeadless(false));
 		Page page = browser.newPage();
 		page.navigate(url);
 		page.getByPlaceholder("Username").type("Admin");
@@ -22,7 +22,9 @@ public class OpenAndClickonButton {
 		page.getByPlaceholder("password").type("admin123");
 		Thread.sleep(1500);
 		
-		page.click("type=\"submit\"");
+	//	page.click("type=submit");
+		page.click("//*[@type='submit']");
+		
 		browser.close();
 
 	}
