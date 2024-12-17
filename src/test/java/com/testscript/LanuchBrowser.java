@@ -20,6 +20,7 @@ public class LanuchBrowser {
 		// argument.add("--start-maximized");
 		argument.add("--start-maximized");
 
+		//open the browser
 		Browser browser = playwright.firefox()
 				.launch(new BrowserType.LaunchOptions().setChannel("firefox").setHeadless(false));
 		// BrowserContext browserContext = browser.newContext(new
