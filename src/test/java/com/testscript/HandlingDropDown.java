@@ -76,7 +76,7 @@ public class HandlingDropDown {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
-			
+			browser.close();
 			
 	}
 }
