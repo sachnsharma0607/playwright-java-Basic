@@ -15,7 +15,7 @@ import com.microsoft.playwright.options.SelectOption;
 
 public class HandlingDropDown {
 
-	//@Test
+	@Test
 	public void dropdown() {
 		String url = "https://www.wikipedia.org/";
 		Playwright playwright = Playwright.create();
